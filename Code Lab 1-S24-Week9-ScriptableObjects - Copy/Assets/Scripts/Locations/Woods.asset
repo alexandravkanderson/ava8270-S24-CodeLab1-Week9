@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b4df180cb77ff4b80392d3f6cbaa29, type: 3}
+  m_Name: Woods
+  m_EditorClassIdentifier: 
+  locationName: The Woods
+  locationDesc: Wind blows through trees, rustling the leaves.
+  north: {fileID: 0}
+  south: {fileID: 11400000, guid: 348f809270f6f28439cdde705a6710a0, type: 2}
+  east: {fileID: 0}
+  west: {fileID: 0}

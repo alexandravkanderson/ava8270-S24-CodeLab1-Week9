@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b4df180cb77ff4b80392d3f6cbaa29, type: 3}
+  m_Name: Park
+  m_EditorClassIdentifier: 
+  locationName: A Green Park
+  locationDesc: A great place for a picnic.
+  north: {fileID: 11400000, guid: 6e2a33a92db86c4479ef2ebd40da87ce, type: 2}
+  south: {fileID: 0}
+  east: {fileID: 0}
+  west: {fileID: 0}
