@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public GameObject backyardDirty;
     public GameObject backyardClean;
 
-    public bool isClean = false;
+    //public bool isClean = false;
     
     // Start is called before the first frame update
     void Start()
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
                 currentLocation = currentLocation.west;
                 break;
             case "C":
-                isClean = true;
+                currentLocation.isClean = true;
                 Debug.Log("is this happening?");
                 break;
             default:
@@ -79,6 +79,18 @@ public class GameManager : MonoBehaviour
                 break;
         }
         currentLocation.UpdateCurrentLocation(this);
+        
+        /*
+         public void locationClean(string plsClean)
+         {
+            switch (plsClean)
+            {
+                case "C":
+                    isClean = true;
+                    break;
+        }
+         * 
+         */
         
         //Function Activate Lake - invoke - make a boolean turn on lake, in one location set it to true, every other location set it to false, at the top set it to false, one location set it to true.
         

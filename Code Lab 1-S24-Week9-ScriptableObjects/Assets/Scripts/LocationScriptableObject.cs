@@ -14,7 +14,7 @@ public class LocationScriptableObject : ScriptableObject
 {
     public string locationName;
     public string locationDesc;
-
+    public bool isClean = false;
     
     
     public LocationScriptableObject north;
@@ -152,69 +152,77 @@ public class LocationScriptableObject : ScriptableObject
             west.east = this;
         }
         
-        //    /*
-        if (gm.isClean == true)
-        {
-            Debug.Log(gm.isClean);
-            
-            //if you can only go south, then you can clean that the woods
-            if (north == null && west==null && east==null)
-            {
-                gm.woodsClean.gameObject.SetActive(true);
-                gm.woodsDirty.gameObject.SetActive(false);
-            }
-            else
-            {
-                gm.woodsClean.gameObject.SetActive(false);
-            }
-            
-            //if you can only go east, then you can clean clean the beach
-            if (north == null && west==null && south==null)
-            {
-                gm.beachClean.gameObject.SetActive(true);
-                gm.beachDirty.gameObject.SetActive(false);
-            }
-            else
-            {
-                gm.beachClean.gameObject.SetActive(false);
-            }
-            
-            //if you can only move south or north, then you can clean the bridge
-
-            if (north != null && south != null && east == null && west == null)
-            {
-                gm.bridgeClean.gameObject.SetActive(true);
-                gm.bridgeDirty.gameObject.SetActive(false);
-            }
-            else
-            {
-                gm.bridgeClean.gameObject.SetActive(false);
-            }
-            
-            //if you can only move west, then you can clean the backyard
-
-            if (west != null && north == null && south == null && east == null)
-            {
-                gm.backyardClean.gameObject.SetActive(true);
-                gm.backyardDirty.gameObject.SetActive(false);
-            }
-            else
-            {
-                gm.backyardClean.gameObject.SetActive(false);
-            }
         
-            //if you can only move north, then you can clean the park
-            if (north != null && south == null && west == null && east == null)
+        // gm.buttonClean.OnClick (get and set)
+        
+         
+        //if(gm.buttonClean.enabled){
+            //gm.isClean = true;
+        
+          
+            if (isClean == true)
             {
-                gm.parkClean.gameObject.SetActive(true);
-                gm.parkDirty.gameObject.SetActive(false);
+                Debug.Log(isClean);
+            
+                //if you can only go south, then you can clean that the woods
+                if (north == null && west==null && east==null)
+                {
+                    gm.woodsClean.gameObject.SetActive(true);
+                    gm.woodsDirty.gameObject.SetActive(false);
+                }
+                else
+                {
+                    gm.woodsClean.gameObject.SetActive(false);
+                }
+            
+                //if you can only go east, then you can clean clean the beach
+                if (north == null && west==null && south==null)
+                {
+                    gm.beachClean.gameObject.SetActive(true);
+                    gm.beachDirty.gameObject.SetActive(false);
+                }
+                else
+                {
+                    gm.beachClean.gameObject.SetActive(false);
+                }
+            
+                //if you can only move south or north, then you can clean the bridge
+
+                if (north != null && south != null && east == null && west == null)
+                {
+                    gm.bridgeClean.gameObject.SetActive(true);
+                    gm.bridgeDirty.gameObject.SetActive(false);
+                }
+                else
+                {
+                    gm.bridgeClean.gameObject.SetActive(false);
+                }
+            
+                //if you can only move west, then you can clean the backyard
+
+                if (west != null && north == null && south == null && east == null)
+                {
+                    gm.backyardClean.gameObject.SetActive(true);
+                    gm.backyardDirty.gameObject.SetActive(false);
+                }
+                else
+                {
+                    gm.backyardClean.gameObject.SetActive(false);
+                }
+        
+                //if you can only move north, then you can clean the park
+                if (north != null && south == null && west == null && east == null)
+                {
+                    gm.parkClean.gameObject.SetActive(true);
+                    gm.parkDirty.gameObject.SetActive(false);
+                }
+                else
+                {
+                    gm.parkClean.gameObject.SetActive(false);
+                }
             }
-            else
-            {
-                gm.parkClean.gameObject.SetActive(false);
-            }
-        }
-        // */
+        //}
+          
         
     }
 }
